@@ -13,4 +13,4 @@ vue create project<br/>
 npm run serve<br/>
 <br/>
 로컬호스트 접속<br/>
-https://localhost:8080<br/>
+http://localhost:8080<br/>
