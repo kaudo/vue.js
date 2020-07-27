@@ -11,6 +11,8 @@ vue create project<br/>
 <br/>
 서버 시작<br/>
 npm run serve<br/>
+<img src="/kaudo/vue.js/blob/master/%23etc/npm_run_serve.png?raw=true"/>
 <br/>
 로컬호스트 접속<br/>
 http://localhost:8080<br/>
+<img src="/kaudo/vue.js/blob/master/%23etc/localhost8080.png?raw=true"/>
