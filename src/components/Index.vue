@@ -39,15 +39,19 @@ export default {
   },
 
   created(){
+  /*
     $('#btn').click(function(){
       alert('click on created');
-    })
+    });
+  */
   },
 
   mounted(){
+  /*
     $('#btn').click(function(){
       alert('click on mounted');
-    })
+    });
+  */
   }
 
 }
