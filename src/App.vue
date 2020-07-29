@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    header<br/>
     vue.kaudo.com<br/>
     vue.js sample site<br/>
 
