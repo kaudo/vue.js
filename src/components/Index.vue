@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>123 {{ msg }}</h1>
+    <h1>msg {{ msg }}</h1>
+    <button id="btn">클릭이벤트</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -35,7 +36,20 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+
+  created(){
+    $('#btn').click(function(){
+      alert('click on created');
+    })
+  },
+
+  mounted(){
+    $('#btn').click(function(){
+      alert('click on mounted');
+    })
   }
+
 }
 </script>
 
