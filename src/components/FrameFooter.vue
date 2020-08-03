@@ -1,15 +1,17 @@
 <template>
   <div class="frameFooter">
     푸터
-  </div>
-  <div class="layerMap">
-    레이어 맵
+
+    <div class="layerMap">
+      레이어 맵
+    </div>
+  
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'FrameFooter',
   props: {
     msg: String
   },

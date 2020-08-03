@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'FrameHeader',
   props: {
     msg: String
   },
