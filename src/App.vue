@@ -1,22 +1,37 @@
 <template>
-    <div id="app">
-    <nav>
-        <router-link to='/'>Home</router-link>
-        <router-link to='/register'>Register</router-link>
-        <router-link to='/login'>Login</router-link>
-    </nav>
-    <router-view />
+<div id="app">
+  <img alt="Vue logo" src="./assets/logo.png" style="width:50px">
+  <div class="test">vue.kaudo.com</div>
+  <div class="test">vue.js example site</div>
+  <div class="test">https://github.com/kaudo/vue.js</div>
+  <nav style="background-color:#fffaee;">
+    <ul>
+      <li>
+          <router-link :to="{name: 'home'}">Home</router-link>
+      </li>
+      <li>
+          <router-link :to="{name: 'register'}">Register</router-link>
+      </li>
+      <li>
+          <router-link :to="{name: 'login'}">Login</router-link>
+      </li>
+      <li>
+          <router-link :to="{name: 'student', params: {id: 2}}">Student</router-link>
+      </li>
+    </ul>
+    <!--
+    <router-link to='/'>Home</router-link><br/>
+    <router-link to='/register'>Register</router-link><br/>
+    <router-link to='/login'>Login</router-link><br/>
+    <router-link to='/student'>STUDENT</router-link><br/>
+    -->
+  </nav>
+  <router-view />
+  <Index msg="안녕하세요."/>
+  <div style="display:none"><HelloWorld msg="Welcome to Your Vue.js App"/></div>
 
-    <br/>----------------------------------<br/>
-
-    vue.kaudo.com<br/>
-    vue.js sample site<br/>
-
-    <img alt="Vue logo" src="./assets/logo.png" style="width:50px">
-    <Index msg="안녕하세요."/>
-
-    <div style="display:none"><HelloWorld msg="Welcome to Your Vue.js App"/></div>
-  </div>
+  <div class="footer">2020 vue.kaudo.com, https://github.com/kaudo/vue.js, kaudo@msn.com</div>
+</div>
 </template>
 
 <script>
@@ -28,6 +43,9 @@ export default {
   components: {
     Index,
     HelloWorld
+  },
+  mounted() {
+    //this.$router.push('/student/765');
   }
 }
 </script>
