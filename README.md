@@ -27,7 +27,6 @@ http://localhost:8000/dashboard<br/>
 <br/><br/>
 
 
-
 <div tag="https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-routing-in-vuejs/">vue.js router</div>
 
 # vue router 설치
