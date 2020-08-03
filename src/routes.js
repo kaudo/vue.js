@@ -4,6 +4,8 @@ import Login from './components/Login.vue';
 import Student from './components/Student.vue';
 import Redirect from './components/Redirect.vue';
 import Error from './components/404.vue';
+import PartkingLotList from './components/PartkingLotList.vue';
+import ParkingLotDetail from './components/ParkingLotDetail.vue';
 
 const routes=[
   {path:'/',component:Home,name:'home'},
@@ -12,6 +14,9 @@ const routes=[
   {path:'/student/:id',component:Student,name:'student'},
   {path:'/redirect',component:Redirect,name:'redirect'},
   {path:'/404',component:Error,name:'404'},
+
+  {path:'/parkingLotList',component:PartkingLotList,name:'parkingLotList'},
+  {path:'/parkingLotDetail',component:ParkingLotDetail,name:'parkingLotDetail'},
 ];
 
 export default routes;

@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <div style="display:none"><FrameHeader msg="Welcome to Your Vue.js App"/></div>
   <img alt="Vue logo" src="./assets/logo.png" style="width:50px">
   <div class="test">vue.kaudo.com</div>
   <div class="test">vue.js example site</div>
@@ -27,22 +28,21 @@
     -->
   </nav>
   <router-view />
-  <Index msg="안녕하세요."/>
-  <div style="display:none"><HelloWorld msg="Welcome to Your Vue.js App"/></div>
+  <FrameFooter msg="안녕하세요."/>
 
   <div class="footer">2020 vue.kaudo.com, https://github.com/kaudo/vue.js, kaudo@msn.com</div>
 </div>
 </template>
 
 <script>
-import Index from './components/Index.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import FrameFooter from './components/FrameFooter.vue'
+import FrameHeader from './components/FrameHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    Index,
-    HelloWorld
+    FrameHeader,
+    FrameFooter,
   },
   mounted() {
     //this.$router.push('/student/765');
