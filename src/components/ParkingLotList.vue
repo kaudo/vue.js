@@ -7,14 +7,14 @@
 import userList from "../assets/dataParkingLot.json";
 
 export default {
-  name: "UserList",
+  name: "List",
   computed:{
-    users(){
-      return userList.users.map((items) => {
-        let c=new Date(items["created_date"]);
-        let created_date=c.getHours()+"시 "+c.getMinutes()+"분";
-        items["created_date"] = created_date;
-        return items;
+    list(){
+      return userList.users.map((item) => {
+        let date=new Date(item["created_date"]);
+        let created_date=date.getHours()+"시 "+date.getMinutes()+"분";
+        item["created_date"] = created_date;
+        return item;
       })
     },
   },
