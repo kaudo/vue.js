@@ -1,14 +1,11 @@
 <template>
     <div>
-
-
-    <ul v-for="(item,index) in list" :key="index">
-   <li>이름 : {{item.name}}</li>
-   <li>전화번호 : {{item.lots}}</li>
-   <li>등록 시간 : {{item.time}}</li>
-   <li>등록 시간 : {{item.address}}</li>
-</ul>
-
+      <ul v-for="(item,index) in list" :key="index" style="display:contents;">
+         <li><b>{{item.name}}</b></li>
+         <li>주차대수: {{item.lots}}</li>
+         <li>운영시간: {{item.time}}</li>
+         <li>주소: {{item.address}}</li>
+      </ul>
     </div>
 </template>
 <script>
