@@ -1,19 +1,27 @@
 <template>
     <div>
-        Student ID is: {{ $route.params.id }}
+
+
+    <ul v-for="(item,index) in list" :key="index">
+   <li>이름 : {{item.name}}</li>
+   <li>전화번호 : {{item.lots}}</li>
+   <li>등록 시간 : {{item.time}}</li>
+   <li>등록 시간 : {{item.address}}</li>
+</ul>
+
     </div>
 </template>
 <script>
-import userList from "../assets/dataParkingLot.json";
+import listParkingLot from "../assets/dataParkingLot.json";
 
 export default {
-  name: "List",
   computed:{
     list(){
-      return userList.users.map((item) => {
-        let date=new Date(item["created_date"]);
-        let created_date=date.getHours()+"시 "+date.getMinutes()+"분";
-        item["created_date"] = created_date;
+      return listParkingLot.list.map((item) => {
+        //let date=new Date(item["created_date"]);
+        //let created_date=date.getHours()+"시 "+date.getMinutes()+"분";
+        //item["created_date"] = created_date;
+        item["test"]=item["no"];
         return item;
       })
     },
