@@ -1,8 +1,8 @@
 <template>
-  <div class="frameFooter" style="background-color:#ffbb00">
+  <div class="frameFooter" style="background-color:#fff">
     <div class="footer">vue.kaudo.com, 2020/08, kaudo@msn.com</div>
 
-    <div class="layerMap" style="border:1px orange solid;">
+    <div class="layerMap" style="display:none;border:1px orange solid;">
       레이어 맵
     </div>
 
