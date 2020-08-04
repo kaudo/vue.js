@@ -1,11 +1,11 @@
 <template>
-  <div class="frameFooter">
-    푸터
+  <div class="frameFooter" style="background-color:#ffbb00">
+    <div class="footer">vue.kaudo.com, 2020/08, kaudo@msn.com</div>
 
-    <div class="layerMap">
+    <div class="layerMap" style="border:1px orange solid;">
       레이어 맵
     </div>
-  
+
   </div>
 </template>
 

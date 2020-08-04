@@ -1,6 +1,10 @@
 <template>
-  <div class="frameHeader">
-    헤더
+  <div class="frameHeader" style="background-color:#ffbb00">
+  <img alt="Vue logo" src="../assets/logo.png" style="width:50px;position:absolute;left:5px;top:5px;">
+  <div class="test">vue.kaudo.com</div>
+  <div class="test">vue.js example site</div>
+  <div class="test">https://github.com/kaudo/vue.js</div>
+
     <input name="keyword"/>
     <button id="btnSearch">검색</button>
   </div>

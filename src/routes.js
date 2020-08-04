@@ -14,7 +14,6 @@ const routes=[
   {path:'/student/:id',component:Student,name:'student'},
   {path:'/redirect',component:Redirect,name:'redirect'},
   {path:'/404',component:Error,name:'404'},
-
   {path:'/parkingLotList',component:ParkingLotList,name:'parkingLotList'},
   {path:'/parkingLotDetail',component:ParkingLotDetail,name:'parkingLotDetail'},
 ];
