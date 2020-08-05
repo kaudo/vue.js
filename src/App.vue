@@ -35,6 +35,11 @@ import FrameHeader from './components/FrameHeader.vue'
 
 export default {
   name: 'App',
+  data: function () {
+    return {
+        showLayerMap:false
+    }
+  },
   components: {
     FrameHeader,
     FrameFooter,

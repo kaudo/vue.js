@@ -2,9 +2,9 @@
   <div class="frameFooter" style="background-color:#888;color:#eee">
     <div class="footer" style="font:normal bold 14px / 26px -webkit-control;">2020/08 vue.kaudo.com kaudo@msn.com</div>
 
-    <div class="layerMap" style="display:none;border:1px orange solid;">
-      레이어 맵
-    </div>
+<div v-if="this.$parent.showLayerMap" class="layerMap" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:700;background-color:#000;">레이어 맵
+<div id="kakaoMap" style="width:100%;height:100%;" v-on:click="toggleLayerMap"></div>
+</div>
 
   </div>
 </template>
@@ -30,6 +30,12 @@ export default {
       alert('click on mounted');
     });
   */
+  },
+  methods: {
+    toggleLayerMap:function(){
+      this.$parent.showLayerMap=!this.$parent.showLayerMap;
+      console.log('rootData',this.$parent.showLayerMap);
+    }
   }
 
 }
