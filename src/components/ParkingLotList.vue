@@ -43,12 +43,7 @@ export default {
     window.kakao && window.kakao.maps ? this.initKakaoMap() : this.loadKakaoMap();
   },
   methods: {
-    initKakaoMap(){
-      const script=document.createElement('script');
-      script.onload=()=>kakao.maps.load(this.loadKakaoMap);
-      script.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey=8b281e74fafada4e73f73eed575ed52d';
-      document.head.appendChild(script);
-    },
+
     loadKakaoMap(){
 
       var container=document.getElementById('kakaoMap');
@@ -61,11 +56,17 @@ export default {
       marker.setMap(map);
 
     },
+    initKakaoMap(){
+      const script=document.createElement('script');
+      script.onload=()=>kakao.maps.load(this.loadKakaoMap);
+      script.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey=8b281e74fafada4e73f73eed575ed52d';
+      document.head.appendChild(script);
+    },
     toggleLayerMap:function(){
       this.$parent.showLayerMap=!this.$parent.showLayerMap;
       console.log('rootData',this.$parent.showLayerMap);
 
-
+/*
         var container=document.getElementById('kakaoMap');
         var options={
           center:new kakao.maps.LatLng(33.450701,126.570667),
@@ -74,7 +75,7 @@ export default {
         var map=new kakao.maps.Map(container,options);
         var marker=new kakao.maps.Marker({position:map.getCenter()});
         marker.setMap(map);
-
+*/
 
     }
   }
