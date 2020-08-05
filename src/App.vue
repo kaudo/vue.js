@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style>
-body{margin:0;padding:0;}
+body{margin:0;padding:0;font:normal normal 14px / 16px -webkit-control;}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
