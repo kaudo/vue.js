@@ -1,10 +1,8 @@
 <template>
 <div id="app">
-  <img alt="Vue logo" src="./assets/logo.png" style="width:50px">
-  <div class="test">vue.kaudo.com</div>
-  <div class="test">vue.js example site</div>
-  <div class="test">https://github.com/kaudo/vue.js</div>
-  <nav style="background-color:#fffaee;">
+  <FrameHeader msg="Welcome to Your Vue.js App"/>
+
+  <nav style="background-color:#fffaee;display:none;">
     <ul>
       <li>
           <router-link :to="{name: 'home'}">Home</router-link>
@@ -26,32 +24,38 @@
     <router-link to='/student'>STUDENT</router-link><br/>
     -->
   </nav>
-  <router-view />
-  <Index msg="안녕하세요."/>
-  <div style="display:none"><HelloWorld msg="Welcome to Your Vue.js App"/></div>
-
-  <div class="footer">2020 vue.kaudo.com, https://github.com/kaudo/vue.js, kaudo@msn.com</div>
+  <router-view/>
+  <FrameFooter msg="안녕하세요."/>
 </div>
 </template>
 
 <script>
-import Index from './components/Index.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import FrameFooter from './components/FrameFooter.vue'
+import FrameHeader from './components/FrameHeader.vue'
 
 export default {
   name: 'App',
+  data: function () {
+    return {
+        showLayerMap:false
+    }
+  },
   components: {
-    Index,
-    HelloWorld
+    FrameHeader,
+    FrameFooter,
   },
   mounted() {
     //this.$router.push('/student/765');
+
+    //this.$router.push('/parkingLotList');
+    //this.$router.push('/parkingLotList').catch(()=>{});
+    if(this.$route.path!=='/parkingLotList') this.$router.push('/parkingLotList')
   }
 }
 </script>
 
 <style>
-body{margin:0;padding:0;}
+body{margin:0;padding:0;font:normal normal 14px / 16px -webkit-control;}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
