@@ -1,6 +1,5 @@
 <template>
     <div style="padding:10px 10px 5px 10px;text-align:left;">
-    ㅎㅎ
       <ul v-for="(item,index) in list" :key="index" style="display:contents;">
          <li><b style="font-size:16px;">{{item.name}}</b></li>
          <li v-on:click="toggleLayerMap" class="btnAddress">주소: 서울시 종로구 {{item.address}}</li>
