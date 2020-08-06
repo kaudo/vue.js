@@ -2,7 +2,7 @@
   <div class="frameFooter" style="background-color:#888;color:#eee">
     <div class="footer" style="font:normal bold 14px / 26px -webkit-control;">2020/08 vue.kaudo.com kaudo@msn.com</div>
 
-<div v-if="this.$parent.showLayerMap" class="layerMap" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:700;background-color:#000;">레이어 맵
+<div v-if="this.$parent.showLayerMap" class="layerMap" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:700;background-color:#000;">
 <div id="kakaoMap" style="width:100%;height:100%;" v-on:click="toggleLayerMap"></div>
 </div>
 
