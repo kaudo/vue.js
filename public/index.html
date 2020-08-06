@@ -6,13 +6,40 @@
     <!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
     <meta name="viewport" content="width=480,user-scalable=no"/>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title><%=htmlWebpackPlugin.options.title%></title>
     <script src="/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=cbd6e39a77c09937734b818c2974da8d"></script>
     <script type="text/javascript">
 $(document).ready(function(){
   $('#btn').click(function(){
     alert('click on index.html document ready');
   });
+
+  $('.btnAddress').click(function(){
+    $.ajax({
+        url:'https://dapi.kakao.com/v2/local/search/address.json?query='+$(this).text().split('~')[0],
+        headers:{'Authorization':'KakaoAK 88bf5219ab2618c0ab4eba7d524da046'},
+        type:'GET'
+    }).done(function(data){
+      if(!data || !data.documents || data.documents.length<1 || !data.documents[0].y){
+        alert('존재하지 않는 주소 입니다.');
+        $('.layerMap').hide();
+        $('#loading').hide();
+      }
+      kakaoMap=new kakao.maps.Map(document.getElementById('kakaoMap'),{center:new kakao.maps.LatLng(data.documents[0].y,data.documents[0].x),level:1,});
+      kakaoMarker=new kakao.maps.Marker({map:kakaoMap,position:kakaoMap.getCenter(),});
+      //var marker=new kakao.maps.Marker({position:kakaoMap.getCenter()}).setMap(map);
+      kakaoCustomOverlay=new kakao.maps.CustomOverlay({
+          //position:new kakao.maps.LatLng(parseFloat(data.documents[0].y)+0.0005,data.documents[0].x),
+          position:kakaoMap.getCenter(),
+          content:'<div style="background-color:#fff;border:1px #333 solid;border-radius: 5px;padding: 2px 6px;margin-top:-65px;"><span class="left"></span><span class="center">'+address+'</span><span class="right"></span></div>'
+      }).setMap(kakaoMap);
+      $('#loading').hide();
+    });
+    return false;
+  });
+
+
 });
     </script>
   </head>
