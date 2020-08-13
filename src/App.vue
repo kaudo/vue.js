@@ -35,9 +35,16 @@ import FrameHeader from './components/FrameHeader.vue'
 
 export default {
   name: 'App',
+  srcView:'/assets/view/view_1.jpg',
+  test: {
+     test: 'view_1.jpg'
+     },
   data: function () {
     return {
-        showLayerMap:false
+        showLayerMap:false,
+        showLayerView:false,
+        srcView:'assets/view/view_1.jpg',
+        indexView:1,
     }
   },
   components: {

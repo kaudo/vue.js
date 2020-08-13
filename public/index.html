@@ -15,7 +15,7 @@ $(document).ready(function(){
     alert('click on index.html document ready');
   });
 
-  $('.btnAddress').click(function(){
+  $('.btnMap').click(function(){
     var address=$(this).text().split('~')[0];
     $.ajax({
         url:'https://dapi.kakao.com/v2/local/search/address.json?query='+address,
