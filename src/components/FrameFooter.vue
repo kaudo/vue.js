@@ -1,6 +1,6 @@
 <template>
   <div class="frameFooter" style="background-color:#888;color:#eee">
-    <div class="footer" style="font:normal bold 14px / 26px -webkit-control;">2020/08 vue.kaudo.com kaudo@msn.com</div>
+    <div class="footer" style="">2020/08 vue.kaudo.com kaudo@msn.com</div>
 
 <div v-if="this.$parent.showLayerMap" class="layerMap" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:700;background-color:#000;">
   <button class="btnClose btnCloseMap" v-on:click="toggleLayerMap">닫기</button>
@@ -15,6 +15,7 @@
   </div>
 </template>
 <style>
+.footer{font:normal bold 14px / 26px arial;font-family:arial,'나눔 고딕',Dotum,'droid sans fallback','AppleGothic',sans-serif;}
 button.btnClose{z-index:710;position:absolute;width:35px;height:35px;background:url('../assets/icon_close.png') no-repeat 0 0 / cover;letter-spacing:-10px;border:0;color:transparent;right:5px;top:5px;}
 </style>
 <script>
