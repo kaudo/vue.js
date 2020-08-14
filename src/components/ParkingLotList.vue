@@ -17,6 +17,7 @@ button.btnView{background:url('../assets/icon_view.png') no-repeat 0px 0px / con
 ;letter-spacing:-10px;width:40px;height:40px;vertical-align:super;vertical-align:middle;}
 button.btnMap{background:url('../assets/icon_map.png') no-repeat 0px 0px / contain;float:right;padding:0;border:0;color:transparent
 ;letter-spacing:-10px;width:40px;height:40px;vertical-align:super;vertical-align:middle;margin:0 0 0 10px;}
+ul{line-height:18px;}
 </style>
 <script>
 import listParkingLot from "../assets/dataParkingLot.json";
