@@ -4,7 +4,7 @@
   <div class="domain">vue.kaudo.com</div>
   <div class="msg" style="text-align:left;padding:0px 10px 5px 10px;font:normal normal 14px / 18px -webkit-control;">안녕하세요. 이 사이트는 vue.js샘플 프로젝트 입니다.<br/>
   <a href="https://github.com/kaudo/vue.js" target="_blank">github.com/kaudo/vue.js</a>에 소스코드가 공개되어 있습니다.<br/>
-  <a href="https://netlify.com" target="_blank">netlify.com</a> 자동 빌드 배포방식으 서비스되고 있습니다.<br/>
+  <a href="https://netlify.com" target="_blank">netlify.com</a> 자동 빌드/배포로 서비스되고 있습니다.<br/>
   <br/>
   <b>2019년도 종로구 공영주차장 현황 (2018년11월28일자료)</b><br/>
   </div>
